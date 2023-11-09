@@ -49,7 +49,7 @@ export default function ImageList({ arr, setActorDetails }) {
                 ) : (
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Nophoto.jpg"
-                    alt="No Photo Available"
+                    alt="Not Available"
                     loading="lazy"
                   />
                 )}
