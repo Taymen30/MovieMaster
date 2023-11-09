@@ -44,6 +44,7 @@ export default function ImageList({ arr, setActorDetails }) {
                   <img
                     src={`https://image.tmdb.org/t/p/original${person.profile_path}?w=248&fit=crop&auto=format&dpr=2`}
                     loading="lazy"
+                    alt={person.name}
                   />
                 ) : (
                   <img

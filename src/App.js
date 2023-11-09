@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Discover from "./Discover";
 import Search from "./Search";
@@ -8,7 +8,6 @@ import Movie from "./Movie";
 import ActorDetails from "./ActorDetails";
 
 function App() {
-  const [page, setPage] = useState(1);
   const [background, setBackground] = useState({});
   const [searchRes, setSearchRes] = useState([]);
   const [movieById, setMovieById] = useState({});

@@ -20,17 +20,16 @@ export default function Movie({ movie, setBackground, setActorDetails }) {
     setDrawerOpen(false);
   };
 
-  const backgroundImageStyle = {
-    backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "100%",
-    height: "1500px",
-    color: "white",
-    textAlign: "center",
-  };
-
   useEffect(() => {
+    const backgroundImageStyle = {
+      backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      width: "100%",
+      height: "1500px",
+      color: "white",
+      textAlign: "center",
+    };
     fetch(
       `https://api.themoviedb.org/3/movie/${movie.id}/credits?api_key=${apiKey}`
     )

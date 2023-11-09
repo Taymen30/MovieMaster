@@ -8,9 +8,9 @@ export default function Discover({ setMovieById, setActorDetails }) {
   const [page, setPage] = useState(1);
 
   const apiKey = process.env.REACT_APP_API_KEY;
-  const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${page}`;
 
   useEffect(() => {
+    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${page}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDiscover(data.results));
