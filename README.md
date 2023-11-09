@@ -4,8 +4,8 @@ Welcome to the MovieMaster app! Discover and explore a world of movies with this
 
 ## Technologies 🛠️
 
-- **React**: The core library used for building interactive user interfaces. ⚛️
-- **JavaScript**: The primary programming language used in React development. 📜
+- **React**: The core library used for building an interactive user interfaces. ⚛️
+- **JavaScript**: The primary programming language used in React for development. 📜
 - **HTML**: Markup language for creating web pages and defining structure. 🌐
 - **CSS**: Stylesheets for formatting and styling the user interface. 🎨
 - **AJAX and Fetch**: Techniques for asynchronous data retrieval and updates. 🔄
