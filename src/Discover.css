@@ -1,0 +1,19 @@
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.movie-li {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 15px;
+}

@@ -1,0 +1,8 @@
+.search {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+.separator {
+  margin: 15px;
+}

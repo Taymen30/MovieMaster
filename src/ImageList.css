@@ -1,0 +1,42 @@
+.image-list-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+.image-item img {
+  height: 200px;
+  width: auto;
+}
+
+.image-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.image-item {
+  flex-shrink: 0;
+}
+
+.scroll-button {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 15px;
+  color: rgb(0, 0, 0);
+}
+
+.scroll-button:focus {
+  outline: none;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+.character {
+  font-weight: bold;
+}

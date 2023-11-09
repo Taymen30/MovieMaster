@@ -1,23 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Discover from "./Discover";
+import Search from "./Search";
+import SearchResults from "./SearchResults";
+import Button from "@mui/material/Button";
+import Movie from "./Movie";
+import ActorDetails from "./ActorDetails";
 
 function App() {
+  const [page, setPage] = useState(1);
+  const [background, setBackground] = useState({});
+  const [searchRes, setSearchRes] = useState([]);
+  const [movieById, setMovieById] = useState({});
+  const [actorDetails, setActorDetails] = useState({});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App" style={background}>
+      <header className="header">
+        <nav>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setMovieById({});
+              setSearchRes([]);
+              setBackground({});
+              setActorDetails({});
+            }}
+            style={{
+              position: "fixed",
+              top: "20px",
+              left: "20px",
+            }}
+          >
+            Home
+          </Button>
+        </nav>
+        <h1 className="logo">MovieMaster</h1>
+        <Search setSearchRes={setSearchRes} />
       </header>
+
+      {actorDetails.cast ? (
+        <ActorDetails
+          setMovieById={setMovieById}
+          actorDetails={actorDetails}
+          setActorDetails={setActorDetails}
+        />
+      ) : movieById.title ? (
+        <Movie
+          setActorDetails={setActorDetails}
+          setBackground={setBackground}
+          movie={movieById}
+        />
+      ) : (
+        <>
+          {searchRes.length > 0 ? (
+            <SearchResults
+              setActorDetails={setActorDetails}
+              setMovieById={setMovieById}
+              searchRes={searchRes}
+            />
+          ) : (
+            <Discover
+              setActorDetails={setActorDetails}
+              setBackground={setBackground}
+              setMovieById={setMovieById}
+            />
+          )}
+        </>
+      )}
     </div>
   );
 }
