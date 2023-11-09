@@ -1,6 +1,7 @@
 # MovieMaster App 🎥🍿
 
 Welcome to the MovieMaster app! Discover and explore a world of movies with this React-based web application. Keep in mind that this project is a work in progress, with exciting updates planned for the future. 🚀
+To view simply click here: https://main--legendary-hamster-5eac7a.netlify.app
 
 ## Technologies 🛠️
 
