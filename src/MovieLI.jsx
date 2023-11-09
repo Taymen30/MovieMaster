@@ -18,6 +18,7 @@ export default function MovieLI({ movie, setMovieById, setActorDetails }) {
             ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
             : "https://www.joblo.com/wp-content/uploads/2008/09/movie-poster-missing-2.jpg"
         }
+        alt={movie.id}
       />
     </div>
   );

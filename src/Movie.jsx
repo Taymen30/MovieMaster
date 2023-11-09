@@ -39,7 +39,7 @@ export default function Movie({ movie, setBackground, setActorDetails }) {
         setBackground(backgroundImageStyle);
       })
       .catch((error) => console.error("Error fetching credits:", error));
-  }, [movie.id]);
+  }, [movie.id, setBackground, movie.backdrop_path]);
 
   return (
     <div className="movie-wrapper" key={movie.id}>
