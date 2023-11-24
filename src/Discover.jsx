@@ -4,24 +4,36 @@ import Button from "@mui/material/Button";
 import "./Discover.css";
 
 export default function Discover({ setMovieById, setActorDetails }) {
+  const [pageMultiplier, setPageMultiplier] = useState(5);
   const [discover, setDiscover] = useState([]);
   const [page, setPage] = useState(1);
+  const [pageEx, setPageEx] = useState(pageMultiplier);
 
   useEffect(() => {
-    const apiKey = process.env.REACT_APP_API_KEY;
-    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${page}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setDiscover(data.results));
+    const fetchMovies = async () => {
+      const apiKey = process.env.REACT_APP_API_KEY;
+      const allMovies = [];
+      for (let i = page; i <= pageEx; i++) {
+        const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${i}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        allMovies.push(...data.results);
+      }
+      setDiscover(allMovies);
+    };
+
+    fetchMovies();
   }, [page]);
 
   function handleNextPage() {
-    setPage((prevPage) => prevPage + 1);
+    setPage((prevPage) => prevPage + pageMultiplier);
+    setPageEx((prevPageEx) => prevPageEx + pageMultiplier);
   }
 
   function handlePrevPage() {
     if (page > 1) {
-      setPage((prevPage) => prevPage - 1);
+      setPage((prevPage) => prevPage - pageMultiplier);
+      setPageEx((prevPageEx) => prevPageEx - pageMultiplier);
     }
   }
 

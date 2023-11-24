@@ -8,6 +8,8 @@
   font-family: "Signika", sans-serif;
   font-size: 90px;
   margin: 20px;
+  mix-blend-mode: difference;
+  color: rgb(24 118 210);
 }
 nav {
   display: flex;

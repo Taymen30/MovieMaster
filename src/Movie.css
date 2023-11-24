@@ -11,7 +11,8 @@
 }
 .movie-title {
   text-align: center;
-  color: rgb(24, 118, 210);
+  mix-blend-mode: difference;
+  color: rgb(24 118 210);
   font-family: "Signika", sans-serif;
   font-size: 2.8rem;
 }
@@ -24,8 +25,9 @@
   padding: 30px;
 }
 .overview-box {
-  color: rgb(24, 118, 210);
-  background-color: #ffffff;
+  color: rgb(24 118 210);
+  mix-blend-mode: difference;
+
   padding: 30px;
   width: 30%;
   height: 100%;
