@@ -23,7 +23,7 @@ export default function Discover({ setMovieById, setActorDetails }) {
     };
 
     fetchMovies();
-  }, [page]);
+  }, [page, pageEx]);
 
   function handleNextPage() {
     setPage((prevPage) => prevPage + pageMultiplier);
