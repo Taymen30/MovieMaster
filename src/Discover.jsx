@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import "./Discover.css";
 
 export default function Discover({ setMovieById, setActorDetails }) {
-  const [pageMultiplier, setPageMultiplier] = useState(5);
+  const [pageMultiplier] = useState(5);
   const [discover, setDiscover] = useState([]);
   const [page, setPage] = useState(1);
   const [pageEx, setPageEx] = useState(pageMultiplier);
